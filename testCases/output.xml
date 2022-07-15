@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.5 on win32)" generated="20220714 16:00:33.339" rpa="false" schemaversion="3">
+<suite id="s1" name="Tc1 Get Request" source="C:\Users\enathue\projects\apiautomation\testCases\tc1_get_request.robot">
+<test id="s1-t1" name="Get_weatherInfo" line="9">
+<kw name="create session myssion ${base_url} #create cookies session">
+<msg timestamp="20220714 16:00:33.380" level="FAIL">No keyword with name 'create session myssion ${base_url} #create cookies session' found.</msg>
+<status status="FAIL" starttime="20220714 16:00:33.380" endtime="20220714 16:00:33.380"/>
+</kw>
+<kw name="${response} = get request myssion /utilities/weather/city/${city}">
+<status status="NOT RUN" starttime="20220714 16:00:33.382" endtime="20220714 16:00:33.382"/>
+</kw>
+<kw name="$log to console ${response.status_code}">
+<status status="NOT RUN" starttime="20220714 16:00:33.384" endtime="20220714 16:00:33.384"/>
+</kw>
+<kw name="$log to console ${response.content}">
+<status status="NOT RUN" starttime="20220714 16:00:33.386" endtime="20220714 16:00:33.386"/>
+</kw>
+<kw name="$log to console ${response.headers} #header - key-value pair">
+<status status="NOT RUN" starttime="20220714 16:00:33.388" endtime="20220714 16:00:33.388"/>
+</kw>
+<kw name="${status_code} = convert to string ${response.status_code}">
+<status status="NOT RUN" starttime="20220714 16:00:33.389" endtime="20220714 16:00:33.389"/>
+</kw>
+<kw name="should be equal ${status_code} 200">
+<status status="NOT RUN" starttime="20220714 16:00:33.390" endtime="20220714 16:00:33.391"/>
+</kw>
+<kw name="${body} = ${response.content}">
+<status status="NOT RUN" starttime="20220714 16:00:33.392" endtime="20220714 16:00:33.392"/>
+</kw>
+<kw name="should contain ${body} Delhi">
+<status status="NOT RUN" starttime="20220714 16:00:33.394" endtime="20220714 16:00:33.394"/>
+</kw>
+<status status="FAIL" starttime="20220714 16:00:33.378" endtime="20220714 16:00:33.395">No keyword with name 'create session myssion ${base_url} #create cookies session' found.</status>
+</test>
+<status status="FAIL" starttime="20220714 16:00:33.342" endtime="20220714 16:00:33.396"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Tc1 Get Request">Tc1 Get Request</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20220714 16:00:33.333" level="ERROR">Error in file 'C:\Users\enathue\projects\apiautomation\testCases\tc1_get_request.robot' on line 2: Non-existing setting 'Library RequestsLibrary'.</msg>
+<msg timestamp="20220714 16:00:33.342" level="ERROR">Error in file 'C:\Users\enathue\projects\apiautomation\testCases\tc1_get_request.robot' on line 5: Setting variable '${base_url} http://restapi.demoqa.com' failed: Invalid variable name '${base_url} http://restapi.demoqa.com'.</msg>
+<msg timestamp="20220714 16:00:33.343" level="ERROR">Error in file 'C:\Users\enathue\projects\apiautomation\testCases\tc1_get_request.robot' on line 6: Setting variable '${city} Delhi' failed: Invalid variable name '${city} Delhi'.</msg>
+</errors>
+</robot>

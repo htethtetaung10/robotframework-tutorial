@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.5 on win32)" generated="20220715 10:47:23.847" rpa="false" schemaversion="3">
+<suite id="s1" name="Tc4 Json" source="C:\Users\enathue\projects\apiautomation\testCases\tc4_json.robot">
+<test id="s1-t1" name="Testcase1:" line="7">
+<kw name="load json from file">
+<var>${json_obj}</var>
+<arg>C:\Users\enathue\projects\apiautomation\testCases\data\jsondata.json</arg>
+<msg timestamp="20220715 10:47:23.870" level="FAIL">No keyword with name 'load json from file' found.</msg>
+<status status="FAIL" starttime="20220715 10:47:23.870" endtime="20220715 10:47:23.870"/>
+</kw>
+<kw name="${name_value} = get value from json">
+<arg>${json_obj} $.firstName</arg>
+<status status="NOT RUN" starttime="20220715 10:47:23.871" endtime="20220715 10:47:23.871"/>
+</kw>
+<kw name="should be equal ${name_value[0]}">
+<arg>John</arg>
+<status status="NOT RUN" starttime="20220715 10:47:23.873" endtime="20220715 10:47:23.873"/>
+</kw>
+<kw name="get value from json">
+<var>${street_value}</var>
+<arg>${json_obj}</arg>
+<arg>$.address.streetAddress</arg>
+<status status="NOT RUN" starttime="20220715 10:47:23.874" endtime="20220715 10:47:23.874"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${street_value[0]}</arg>
+<arg>naist street</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="NOT RUN" starttime="20220715 10:47:23.874" endtime="20220715 10:47:23.874"/>
+</kw>
+<status status="FAIL" starttime="20220715 10:47:23.869" endtime="20220715 10:47:23.874">No keyword with name 'load json from file' found.</status>
+</test>
+<status status="FAIL" starttime="20220715 10:47:23.850" endtime="20220715 10:47:23.875"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Tc4 Json">Tc4 Json</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20220715 10:47:23.843" level="ERROR">Error in file 'C:\Users\enathue\projects\apiautomation\testCases\tc4_json.robot' on line 2: Non-existing setting 'Library JSONLibrary'.</msg>
+<msg timestamp="20220715 10:47:23.844" level="ERROR">Error in file 'C:\Users\enathue\projects\apiautomation\testCases\tc4_json.robot' on line 3: Non-existing setting 'Library os'. Did you mean:
+    Library</msg>
+<msg timestamp="20220715 10:47:23.844" level="ERROR">Error in file 'C:\Users\enathue\projects\apiautomation\testCases\tc4_json.robot' on line 4: Non-existing setting 'Library Collections'.</msg>
+</errors>
+</robot>
